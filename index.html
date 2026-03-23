@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Premium Design</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body class="dark-theme">
+    <nav class="glass-nav">
+        <div class="nav-container">
+            <a href="#" class="logo">H<span>L</span>.</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section id="hero" class="hero">
+            <div class="hero-content">
+                <h1 class="reveal">Crafting Digital <br><span class="accent"></span></h1>
+                <p class="reveal">Hi, I'm Himasara Liyanage, a passionate Full-Stack Developer dedicated to building high-performance, visually stunning web experiences.</p>
+                <div class="hero-socials reveal">
+                    <a href="https://github.com/Doom299" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/himasara-maliduwa-9260b4357" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="social-icon"><i class="fas fa-code"></i></a> <!-- LeetCode dummy -->
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a> <!-- Twitter dummy -->
+                </div>
+                <div class="hero-btns reveal">
+                    <a href="#contact" class="btn primary">Let's Collaborate <i class="fas fa-user-plus"></i></a>
+                    <a href="#" class="btn secondary">Get Resume <i class="fas fa-download"></i></a>
+                </div>
+            </div>
+            <div class="hero-visual reveal">
+                <!-- Terminal-like UI will be styled here -->
+                <div class="terminal glass-card">
+                    <div class="terminal-header">
+                        <div class="terminal-dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <span class="terminal-title">Portfolio.ts</span>
+                    </div>
+                    <div class="terminal-body">
+                        <code>
+                            <span class="const">const</span> <span class="var">developer</span> = {<br>
+                            &nbsp;&nbsp;name: <span class="string">'Abdul Basit'</span>,<br>
+                            &nbsp;&nbsp;role: <span class="string">'Full Stack Developer'</span>,<br>
+                            &nbsp;&nbsp;skills: [<span class="string">'React'</span>, <span class="string">'Next.js'</span>, <span class="string">'Node.js'</span>],<br>
+                            &nbsp;&nbsp;drivenBy: <span class="string">'Passion for Excellence'</span><br>
+                            };
+                        </code>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about section-padding">
+            <div class="container">
+                <h2 class="section-title reveal">About Me</h2>
+                <div class="about-grid">
+                    <div class="about-img reveal">
+                        <div class="img-frame glass-card">
+                            <img src="profile.png" alt="Himasara Liyanage">
+                        </div>
+                    </div>
+                    <div class="about-text reveal">
+                        <p>I specialize in bridging the gap between design and technology. My journey in development has always been driven by a desire to create interfaces that are not only functional but also breathtakingly beautiful.</p>
+                        <p>With experience in modern frameworks and a keen eye for aesthetics, I transform ideas into seamless digital realities.</p>
+                    </div>
+                    <div class="about-stats reveal">
+                        <div class="stat-card glass-card">
+                            <h3>2+</h3>
+                            <p>Years Experience</p>
+                        </div>
+                        <div class="stat-card glass-card">
+                            <h3>15+</h3>
+                            <p>Projects Done</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="experience section-padding">
+            <div class="container">
+                <h2 class="section-title reveal">Professional Journey</h2>
+                <div class="timeline">
+                    <!-- Timeline items will be styled in CSS -->
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass-card">
+                            <span class="date">2022 - Present</span>
+                            <h3>Undergraduate Student</h3>
+                            <p>Pursuing a degree in Software Engineering while actively building full-stack applications and AI-driven solutions.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass-card">
+                            <span class="date">2023 - 2024</span>
+                            <h3>Full Stack Developer (Project-Based)</h3>
+                            <p>Developed and deployed various applications including smart agriculture platforms and e-commerce clones.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="skills section-padding">
+            <div class="container">
+                <h2 class="section-title reveal">The Architect's Toolkit</h2>
+                <div class="skills-grid">
+                    <div class="skill-card glass-card reveal">
+                        <i class="fab fa-react"></i>
+                        <span>React / Next.js</span>
+                    </div>
+                    <div class="skill-card glass-card reveal">
+                        <i class="fab fa-node-js"></i>
+                        <span>Node.js</span>
+                    </div>
+                    <div class="skill-card glass-card reveal">
+                        <i class="fas fa-paint-brush"></i>
+                        <span>Vanilla CSS/SASS</span>
+                    </div>
+                    <div class="skill-card glass-card reveal">
+                        <i class="fab fa-js-square"></i>
+                        <span>JavaScript ES6+</span>
+                    </div>
+                    <div class="skill-card glass-card reveal">
+                        <i class="fas fa-database"></i>
+                        <span>SQL / NoSQL</span>
+                    </div>
+                    <div class="skill-card glass-card reveal">
+                        <i class="fab fa-figma"></i>
+                        <span>UI/UX Design</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects section-padding">
+            <div class="container">
+                <h2 class="section-title reveal">Featured Works</h2>
+                <div class="project-grid">
+                    <div class="project-card glass-card reveal">
+                        <div class="project-img">
+                            <img src="urban_roots.png" alt="Urban Roots Preview">
+                            <div class="img-overlay"></div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Urban Roots</h3>
+                            <p>Smart Agriculture Platform integrating IoT sensors (pH, NPK) and AI crop recommendations.</p>
+                            <div class="project-tags">
+                                <span>IoT</span>
+                                <span>Nest.JS</span>
+                                <span>AI</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#">Live Demo</a>
+                                <a href="#">Source Code</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card glass-card reveal">
+                        <div class="project-img">
+                            <img src="estate_agent.png" alt="Estate Agent Preview">
+                            <div class="img-overlay"></div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Estate Agent</h3>
+                            <p>Responsive client-side application for browsing and managing property listings with advanced filtering.</p>
+                            <div class="project-tags">
+                                <span>React</span>
+                                <span>Frontend</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#">Live Demo</a>
+                                <a href="#">Source Code</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card glass-card reveal">
+                        <div class="project-img">
+                            <img src="amazon_clone.png" alt="Amazon Clone Preview">
+                            <div class="img-overlay"></div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Amazon Clone</h3>
+                            <p>Full-stack e-commerce app with product listings, cart management, and interactive user logic.</p>
+                            <div class="project-tags">
+                                <span>React</span>
+                                <span>Full-Stack</span>
+                                <span>API</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#">Live Demo</a>
+                                <a href="#">Source Code</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card glass-card reveal">
+                        <div class="project-img">
+                            <div class="placeholder-img" style="background: linear-gradient(135deg, #1a1a1a, #333); height: 100%; display: flex; align-items: center; justify-content: center; color: #555; font-size: 3rem;"><i class="fas fa-car-side"></i></div>
+                            <div class="img-overlay"></div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Vehicle Tracker</h3>
+                            <p>Python-based Tkinter application for tracking vehicle counts and storing descriptive data logs.</p>
+                            <div class="project-tags">
+                                <span>Python</span>
+                                <span>Tkinter</span>
+                                <span>GUI</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#">Live Demo</a>
+                                <a href="#">Source Code</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact section-padding">
+            <div class="container">
+                <h2 class="section-title reveal">Let's Connect</h2>
+                <div class="contact-wrapper">
+                    <form class="contact-form glass-card reveal">
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn primary">Send Message</button>
+                    </form>
+                    <div class="contact-info reveal">
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <p>hello@portfolio.com</p>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p>New York, USA</p>
+                        </div>
+                        <div class="social-links">
+                            <a href="https://github.com/Doom299" target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/himasara-maliduwa-9260b4357" target="_blank"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fas fa-code"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="glass-footer">
+        <p>&copy; 2025 Himasara Portfolio. Made with ❤️ & Design.</p>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>
