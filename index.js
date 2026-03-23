@@ -51,16 +51,27 @@ const revealObserver = new IntersectionObserver((entries) => {
 
 revealElements.forEach(el => revealObserver.observe(el));
 
+// Mobile Menu Toggle
+const mobileMenu = document.getElementById('mobile-menu');
+const navLinks = document.querySelectorAll('.nav-links a');
+const navContainer = document.querySelector('.nav-links');
+
+if (mobileMenu) {
+    mobileMenu.addEventListener('click', () => {
+        navContainer.classList.toggle('active');
+        mobileMenu.classList.toggle('is-active');
+    });
+}
+
 // Scroll Spy for Navbar
 const sections = document.querySelectorAll('section');
-// navLinks already declared above
 
 window.addEventListener('scroll', () => {
     let current = '';
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.clientHeight;
-        if (pageYOffset >= (sectionTop - sectionHeight / 3)) {
+        if (window.pageYOffset >= (sectionTop - sectionHeight / 3)) {
             current = section.getAttribute('id');
         }
     });
@@ -72,17 +83,6 @@ window.addEventListener('scroll', () => {
         }
     });
 });
-
-// Mobile Menu Toggle (Basic logic)
-const mobileMenu = document.getElementById('mobile-menu');
-const navLinks = document.querySelector('.nav-links');
-
-if (mobileMenu) {
-    mobileMenu.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-        mobileMenu.classList.toggle('is-active');
-    });
-}
 // --- Tech Stack Centered Highlight ---
 function updateActiveTechCard() {
     const marqueeRows = document.querySelectorAll('.marquee-row');
