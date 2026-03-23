@@ -381,23 +381,133 @@ body::after {
     font-weight: 600;
 }
 
-/* Skills Grid */
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 2rem;
+/* Skills Section Branding */
+.section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+    position: relative;
 }
 
-.skill-card {
+.inventory-tag {
+    display: inline-block;
+    color: var(--accent-color);
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 4px;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.inventory-tag::before,
+.inventory-tag::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 30px;
+    height: 1px;
+    background: var(--accent-color);
+    opacity: 0.5;
+}
+
+.inventory-tag::before { right: 110%; }
+.inventory-tag::after { left: 110%; }
+
+.accent-gradient-text {
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+}
+
+/* Infinite Marquee Tech Stack */
+.marquee-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 1rem;
+    gap: 2rem;
+    padding: 2rem 0;
+    overflow: hidden;
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
 }
 
-.skill-card i {
-    font-size: 2.5rem;
-    color: var(--accent-color);
+.marquee-row {
+    display: flex;
+    width: 100%;
+}
+
+.marquee-content {
+    display: flex;
+    gap: 2rem;
+    padding-right: 2rem;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.marquee-right .marquee-content {
+    animation-name: scrollRight;
+}
+
+.marquee-left .marquee-content {
+    animation-name: scrollLeft;
+}
+
+@keyframes scrollRight {
+    0% { transform: translateX(-50%); }
+    100% { transform: translateX(0); }
+}
+
+@keyframes scrollLeft {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* Pause on hover (Optional, but user said "no pause", so I'll skip) */
+
+.tech-card {
+    background: rgba(20, 20, 20, 0.8);
+    border: 1px solid rgba(255, 34, 0, 0.1);
+    border-radius: 16px;
+    padding: 1.2rem 2rem;
+    min-width: 280px;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.tech-card i {
+    font-size: 2rem;
+    color: #cc2200; /* Red accent #cc2200 */
+}
+
+.tech-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.tech-info h4 {
+    color: #fff;
+    font-weight: 800;
+    font-size: 1.1rem;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+.tech-info span {
+    color: #cc2200;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+/* Active/Centered Highlight Fallback: Hover */
+.tech-card:hover, .tech-card.active {
+    background: rgba(40, 40, 40, 0.9);
+    border-color: #cc2200;
+    box-shadow: 0 0 20px rgba(204, 34, 0, 0.2);
+    transform: translateY(-5px);
 }
 
 /* Projects Grid */

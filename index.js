@@ -83,6 +83,40 @@ if (mobileMenu) {
         mobileMenu.classList.toggle('is-active');
     });
 }
+// --- Tech Stack Centered Highlight ---
+function updateActiveTechCard() {
+    const marqueeRows = document.querySelectorAll('.marquee-row');
+    const centerX = window.innerWidth / 2;
+
+    marqueeRows.forEach(row => {
+        const cards = row.querySelectorAll('.tech-card');
+        let closestCard = null;
+        let minDistance = Infinity;
+
+        cards.forEach(card => {
+            const rect = card.getBoundingClientRect();
+            const cardCenterX = rect.left + rect.width / 2;
+            const distance = Math.abs(centerX - cardCenterX);
+
+            if (distance < minDistance) {
+                minDistance = distance;
+                closestCard = card;
+            }
+            card.classList.remove('active');
+        });
+
+        if (closestCard) {
+            closestCard.classList.add('active');
+        }
+    });
+
+    requestAnimationFrame(updateActiveTechCard);
+}
+
+// Initialize on load
+window.addEventListener('load', () => {
+    updateActiveTechCard();
+});
 
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
